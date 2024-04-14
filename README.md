@@ -26,7 +26,7 @@
 
 
 
-### 3.4 RNN with self-attention
+### 3.4 BERT Based Classifier
 
 
 

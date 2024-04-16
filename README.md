@@ -16,7 +16,19 @@
 
 ### 3.1 Vectorization Method
 
+The computer can not directly process the human language (i.e. human words or sentences), so we need a technique to map our words or sentences to a specific number which the computer can process. In 2013, a algorithm called Word2Vec has been published. It can map a word to a vector with a fixed dimension, and still keep the semantic meaning of the word. For example, we have the classic equation: 
+$$
+Vector_{king}-Vector_{man}+Vector_{woman}\approx Vector_{queen}
+$$
+With the keeping of semantic meaning, we can perfectly convert the human language to the word vector without loss too much information. The main algorithm to get this vector are Continuous Bag-Of-Words (CBOW) and continuously sliding skip-gram.
 
+The algorithm to map a sentences to a fixed dimension vector is called Sent2Vec, which is similar to the Word2Vec.
+
+In this report, we will use fastText as the Word2Vec model and paraphrase-multilingual-mpnet-base-v2 as the Sent2Vec model. 
+
+**fastText** fasrText is a library for efficient text classification and representation learning. It provide pre-trained models for 157 languages. We will leverage the German model in out report. The dimension of the word vector we choose is 300, which means each word will be represent with a 300-dimension vector. For the words which is not included in the Word2Vec model, we use the "unknown" word vector as the placeholder. Because some models need a fixed training data size, so we imputation each comments or texts with the "end-of-sentence" vector to let all comments or texts has the same length.
+
+**Sentence-BERT** Sentence-BERT is a state-of-the-art sentence embedding model, we here use its paraphrase-multilingual-mpnet-base-v2 version. It can map the sentences & paragraphs to a 768 dimensional dense vector space.
 
 ### 3.2 Support Vector Machine
 
@@ -26,19 +38,26 @@
 
 
 
-### 3.4 BERT Based Classifier
+### 3.4 Encoder-Only Transformer
 
+The Transformer architecture was proposed in 2017 by google. It contains two part: the encoder module and the decoder module. We use encoder-only architecture because this design can better understanding the sentiment of the input text. The hyperparameters setting is by doing grid searching: for nhead in $\{ 1,2,4\}$; for dim_feedforward in $\{4, 8, 16, 32 \}$; for nun_layer of encoders  in $\{2, 4, 6 \}$; for dropout rate in $\{ 0.1, 0.3 \}$.
 
+### 3.5 BERT-Based Classifier
+
+The BERT is a transformers model pretrained on a large corpus of multilingual data in a self-supervised fashion. The model used Masked language modeling (MLM) and Next sentence prediction (NSP), which makes it has the ability to extract the bidirectional representation from the input sentences. 
+
+In this report, we will leverage the bert-base-multilingual-cased, which supports up to 104 languages. And we will use the corresponding tokenizer to get the tokens of the training data rather than using the tokenizer mentioned above. 
 
 ## 4. Experiments
 
-
-
-
+|           model           | Accuracy | Precision | Recall | F1-score |
+| :-----------------------: | :------: | :-------: | :----: | :------: |
+| Encoder-Only task-German  |          |           |        |          |
+|     BERT task-German      |  0.7234  |  0.6948   | 0.7234 |  0.6999  |
+| Encoder-Only task-English |          |           |        |          |
+|     BERT task-English     |  0.8086  |  0.7663   | 0.8086 |  0.7724  |
 
 ## 5. Application
-
-
 
 
 

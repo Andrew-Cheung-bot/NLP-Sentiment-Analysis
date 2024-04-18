@@ -13,10 +13,11 @@
 
 ### 3.1 Vectorization Method
 
-The computer can not directly process human language (i.e., human words or sentences), so we need a technique to map our words or sentences to a specific number that the computer can process. In 2013, an algorithm called Word2Vec has been published. It can map a word to a vector with a fixed dimension, and still keep the semantic meaning of the word. For example, we have the classic equation: 
-$$
-Vector_{king}-Vector_{man}+Vector_{woman}\approx Vector_{queen}
-$$
+The computer can not directly process human language (i.e., human words or sentences), so we need a technique to map our words or sentences to a specific number that the computer can process. In 2013, an algorithm called Word2Vec has been published. It can map a word to a vector with a fixed dimension, and still keep the semantic meaning of the word.  
+For example, we have the classic equation: 
+
+$$Vector_{king}-Vector_{man}+Vector_{woman}\approx Vector_{queen}$$
+
 With the keeping of semantic meaning, we can perfectly convert the human language to the word vector without losing too much information. The main algorithms to get this vector are Continuous Bag-Of-Words (CBOW) and continuously sliding skip-gram.
 
 The algorithm to map a sentence to a fixed dimension vector is called Sent2Vec, which is similar to the Word2Vec.
@@ -43,7 +44,7 @@ we will utilize the basic RNN cell that processes input sequences one element at
 
 The Transformer architecture was proposed in 2017 by google. It contains two parts: the encoder module and the decoder module. We use encoder-only architecture because this design can better understand the sentiment of the input text.  
 
-_The hyperparameters setting is by doing grid searching:_ 
+_The hyperparameters setting is by doing grid searching:_  
 for nhead in $\{ 1,2,4\}$;  
 for dim_feedforward in $\{4, 8, 16, 32 \}$;  
 for nun_layer of encoders in $\{2, 4, 6 \}$;  

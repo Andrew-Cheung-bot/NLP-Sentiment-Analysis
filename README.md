@@ -36,7 +36,9 @@ In this report, we will use fastText as the Word2Vec model and paraphrase-multil
 
 ### 3.3 Vanilla RNN (or GRU/LSTM)
 
+Gated Recurrent Unit (GRU) is a type of recurrent neural network (RNN) that was introduced by Cho et al. in 2014 as a simpler alternative to Long Short-Term Memory (LSTM) networks. Like LSTM, GRU can process sequential data such as text, speech, and time-series data.
 
+we will utilize the basic RNN cell that processes input sequences one element at a time while maintaining an internal state. This allows the network to remember past information and make predictions based on the sequence context.
 
 ### 3.4 Encoder-Only Transformer
 
@@ -49,13 +51,20 @@ The BERT is a transformers model pre-trained on a large corpus of multilingual d
 In this report, we will leverage the bert-base-multilingual-cased, which supports up to 104 languages. We will use the corresponding tokenizer to get the tokens for the training data rather than the tokenizer mentioned above. 
 
 ## 4. Experiments
+- [German Dataset](https://github.com/UCSM-DUE/IWG_hatespeech_public) __(with Expert 1's labels)__
 
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
-| Encoder-Only task-German  |  0.2872  |  0.2796   | 1.0000 |  0.4370  |
-|     BERT task-German      |  0.7234  |  0.6948   | 0.7234 |  0.6999  |
-| Encoder-Only task-English |          |           |        |          |
-|     BERT task-English     |  0.8086  |  0.7663   | 0.8086 |  0.7724  |
+|       Encoder-Only        |  0.2872  |  0.2796   | 1.0000 |  0.4370  |
+|           BERT            |  0.7234  |  0.6948   | 0.7234 |  0.6999  |
+|       Standard GRU Net    |  0.7376  |   0.5     | 0.3784 |  0.4308  |
+- [English Dataset (SOCC)](https://www.kaggle.com/datasets/mtaboada/sfu-opinion-and-comments-corpus-socc) 
+
+|           model           | Accuracy | Precision | Recall | F1-score |
+| :-----------------------: | :------: | :-------: | :----: | :------: |
+|       Encoder-Only        |          |           |        |          |
+|           BERT            |  0.8086  |  0.7663   | 0.8086 |  0.7724  |
+|       Standard GRU Net    |  0.7636  |  0.3667   | 0.3793 |  0.3729  |
 
 ## 5. Application
 

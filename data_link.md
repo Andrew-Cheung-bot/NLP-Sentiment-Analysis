@@ -1,0 +1,1 @@
+- Embedding vector dataset [download link](https://drive.google.com/drive/folders/1pHn3XXpkdenfCKaTOod2DofbGCxxrKod?usp=drive_link)

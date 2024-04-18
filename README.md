@@ -1,16 +1,14 @@
-#  NLP GROUP
+#  Sentiment Ayalysis
+---
 
 ## Abstract
-
-
+...
 
 ## 1. Introduction
-
-### 
+...
 
 ## 2. Background Survey
-
-
+...
 
 ## 3. Methodology
 
@@ -26,12 +24,14 @@ The algorithm to map a sentence to a fixed dimension vector is called Sent2Vec, 
 
 In this report, we will use fastText as the Word2Vec model and paraphrase-multilingual-mpnet-base-v2 as the Sent2Vec model. 
 
-**fastText** fasrText is a library for efficient text classification and representation learning. It provides pre-trained models for 157 languages. We will leverage the German model in our report. The dimension of the word vector we choose is 300, which means each word will be represented with a 300-dimension vector. For the words that are not included in the Word2Vec model, we use the "unknown" word vector as the placeholder. Because some models need a fixed training data size, so we imputation each comment or text with the "end-of-sentence" vector to let all comments or texts have the same length.
+> [**fastText**](https://github.com/facebookresearch/fastText/)  
+> fastText is a library for efficient text classification and representation learning. It provides pre-trained models for 157 languages. We will leverage the German model in our report. The dimension of the word vector we choose is 300, which means each word will be represented with a 300-dimension vector. For the words that are not included in the Word2Vec model, we use the "unknown" word vector as the placeholder. Because some models need a fixed training data size, so we imputation each comment or text with the "end-of-sentence" vector to let all comments or texts have the same length.
 
-**Sentence-BERT** Sentence-BERT is a state-of-the-art sentence embedding model. Here, we use its paraphrase-multilingual-mpnet-base-v2 version. It can map the sentences & paragraphs to a 768-dimensional dense vector space.
+> [**Sentence-BERT**](https://arxiv.org/abs/1908.10084)  
+> Sentence-BERT is a state-of-the-art sentence embedding model. Here, we use its paraphrase-multilingual-mpnet-base-v2 version. It can map the sentences & paragraphs to a 768-dimensional dense vector space.
 
 ### 3.2 Support Vector Machine
-
+...
 
 
 ### 3.3 Vanilla RNN (or GRU/LSTM)
@@ -42,7 +42,13 @@ we will utilize the basic RNN cell that processes input sequences one element at
 
 ### 3.4 Encoder-Only Transformer
 
-The Transformer architecture was proposed in 2017 by google. It contains two parts: the encoder module and the decoder module. We use encoder-only architecture because this design can better understand the sentiment of the input text. The hyperparameters setting is by doing grid searching: for nhead in $\{ 1,2,4\}$; for dim_feedforward in $\{4, 8, 16, 32 \}$; for nun_layer of encoders in $\{2, 4, 6 \}$; for dropout rate in $\{ 0.1, 0.3 \}$.
+The Transformer architecture was proposed in 2017 by google. It contains two parts: the encoder module and the decoder module. We use encoder-only architecture because this design can better understand the sentiment of the input text.  
+
+_The hyperparameters setting is by doing grid searching:_ 
+for nhead in $\{ 1,2,4\}$;  
+for dim_feedforward in $\{4, 8, 16, 32 \}$;  
+for nun_layer of encoders in $\{2, 4, 6 \}$;  
+for dropout rate in $\{ 0.1, 0.3 \}$.
 
 ### 3.5 BERT-Based Classifier
 

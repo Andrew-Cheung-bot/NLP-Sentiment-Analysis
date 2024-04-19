@@ -65,6 +65,7 @@ In this report, we will leverage the bert-base-multilingual-cased, which support
 |           BERT            |  0.7340  |  0.6000   | 0.1154 |  0.1935  |
 |       Standard GRU Net    |  0.7376  |  0.5000   | 0.3784 |  0.4308  |
 - Transfer result
+
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
 |       Encoder-Only        |          |           |        |          |
@@ -78,6 +79,7 @@ In this report, we will leverage the bert-base-multilingual-cased, which support
 |           BERT            |  0.8134  |  0.5000   | 0.1795 |  0.2642  |
 |       Standard GRU Net    |  0.7636  |  0.3667   | 0.3793 |  0.3729  |
 - Transfer result
+
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
 |       Encoder-Only        |          |           |        |          |

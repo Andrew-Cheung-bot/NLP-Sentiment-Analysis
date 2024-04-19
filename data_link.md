@@ -1,1 +1,2 @@
 - Embedding vector dataset [download link](https://drive.google.com/drive/folders/1pHn3XXpkdenfCKaTOod2DofbGCxxrKod?usp=drive_link)
+- Data Link for CyberBullying: [download link](https://drive.google.com/drive/folders/1iw3-iR_0uBwwMLX8ob9rTyvronMIhhjC?usp=sharing)

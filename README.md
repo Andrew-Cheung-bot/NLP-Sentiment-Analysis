@@ -69,7 +69,7 @@ In this report, we will leverage the bert-base-multilingual-cased, which support
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
 |       Encoder-Only        |          |           |        |          |
-|           BERT            |          |           |        |          |
+|           BERT            |  0.5000  |  0.5000   | 0.0800 |  0.1379  |
 |       Standard GRU Net    |          |           |        |          |
 - [English Dataset (SOCC)](https://www.kaggle.com/datasets/mtaboada/sfu-opinion-and-comments-corpus-socc) 
 
@@ -83,7 +83,7 @@ In this report, we will leverage the bert-base-multilingual-cased, which support
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
 |       Encoder-Only        |          |           |        |          |
-|           BERT            |          |           |        |          |
+|           BERT            |  0.5200  |  0.6000   | 0.1200 |  0.2000  |
 |       Standard GRU Net    |          |           |        |          |
 
 ## 5. Application

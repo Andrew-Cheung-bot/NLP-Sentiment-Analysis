@@ -82,7 +82,7 @@ In this report, we will leverage the bert-base-multilingual-cased, which support
 
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
-|       Encoder-Only        |          |           |        |          |
+|       Encoder-Only        |  0.5000  |  0.5000   | 1.0000 |  0.6667  |
 |           BERT            |  0.5200  |  0.6000   | 0.1200 |  0.2000  |
 |       Standard GRU Net    |          |           |        |          |
 

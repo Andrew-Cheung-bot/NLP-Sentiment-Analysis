@@ -1,4 +1,4 @@
-#  <div style="text-align: center;">Machine Learning Techniques for Cross-Lingual Cyberbullying Detection</div>
+#  <div align="center">ML Techniques for Cross-Lingual Cyberbullying Detection</div>
 
 ## Abstract
 Cyberbullying, a pervasive issue in the digital age, necessitates robust detection mechanisms to safeguard individuals across various online platforms. Many scholars have applied various techniques for cyberbullying detection. This study contributes to the field by evaluating the effectiveness of advanced machine learning techniques in detecting cyberbullying on German and English. We employed three distinct computational models: Support Vector Machine (SVM), Recurrent Neural Network (RNN), and BERT, to assess their performance in identifying cyberbullying incidents. We use metrics such as precision, recall, and F1-score to gauge the models' detection capabilities. Additionally, we explored the adaptability of these models through cross-lingual transfer learning experiments, assessing their ability to generalize from one language to another. 
@@ -60,11 +60,10 @@ The BERT<sup><a href="#ref17">17</a></sup> is a transformers model pre-trained o
 In this report, we will leverage the bert-base-multilingual-cased, which supports up to 104 languages. We will use the corresponding tokenizer to get the tokens for the training data rather than the tokenizer mentioned above. 
 
 ## 3. Experiments
-We chose two datasets for our experiments, one is German Twitter Data Set <sup><a href="#ref18">18</a></sup> and the other is SFU Opinion and Comment Corpus <sup><a href="#ref19">19</a></sup>.We first trained and tested using each of the four methods on the German dataset, and the experimental results are shown below.
-
+We chose two datasets for our experiments, one is German Twitter Data Set <sup><a href="#ref18">18</a></sup> and the other is SFU Opinion and Comment Corpus <sup><a href="#ref19">19</a></sup>. We first trained and tested using each of the four methods on the German dataset, and the experimental results are shown below.
 
 - [German Dataset](https://github.com/UCSM-DUE/IWG_hatespeech_public) __(with Expert 1's labels)__
-
+  
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
 |       Encoder-Only        |  0.6915  |  0.3636   | 0.1538 |  0.2162  |
@@ -82,7 +81,7 @@ Recall reflects the percentage of actual positive instances correctly identified
 
 F1-Score, which is the harmonic mean of Precision and Recall, provides a balance between these metrics and is crucial for evaluating overall model performance. The SVM model led with the highest F1-Score of 58.71%, demonstrating a good balance between precision and recall. The Standard GRU Network had an F1-Score of 43.08%, and both BERT and Encoder-Only models had lower F1-Scores at 19.35% and 21.62%, respectively.
 
-- [English Dataset (SOCC)](https://www.kaggle.com/datasets/mtaboada/sfu-opinion-and-comments-corpus-socc) 
+- [English Dataset (SOCC)](https://www.kaggle.com/datasets/mtaboada/sfu-opinion-and-comments-corpus-socc)
 
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |

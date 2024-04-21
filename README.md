@@ -108,8 +108,8 @@ We collected 50 comments from Twitter at random and manually labeled each as eit
 
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
-|       Encoder-Only        |          |           |        |          |
-|           BERT            |          |           |        |          |
+|       Encoder-Only        |  0.6200  |  0.7143   | 0.4000 |  0.5128  |
+|           BERT            |  0.5000  |  0.5000   | 0.0800 |  0.1379  |
 |       Standard GRU Net    |  0.6432  |  0.5152   | 0.1954 |  0.2833  |
 |           SVM             |  0.52    |  0.755    | 0.52   |  0.37    |
 
@@ -117,8 +117,8 @@ We collected 50 comments from Twitter at random and manually labeled each as eit
 
 |           model           | Accuracy | Precision | Recall | F1-score |
 | :-----------------------: | :------: | :-------: | :----: | :------: |
-|       Encoder-Only        |          |           |        |          |
-|           BERT            |          |           |        |          |
+|       Encoder-Only        |  0.5000  |  0.5000   | 1.0000 |  0.6667  |
+|           BERT            |  0.5200  |  0.6000   | 0.1200 |  0.2000  |
 |       Standard GRU Net    |  0.7163  |  0.3958   | 0.4578 |  0.4246  |
 |           SVM             |  0.6     |  0.611    | 0.6    |  0.58    |
 

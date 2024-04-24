@@ -41,7 +41,7 @@ Support Vector Machines (SVM) are a robust class of supervised learning algorith
 
 Gated Recurrent Unit (GRU)<sup><a href="#ref15">15</a></sup> is a type of recurrent neural network (RNN) that was introduced by Cho et al. in 2014 as a simpler alternative to Long Short-Term Memory (LSTM) networks. Like LSTM, GRU can process sequential data such as text, speech, and time-series data.
 
-we will utilize the basic RNN cell that processes input sequences one element at a time while maintaining an internal state. This allows the network to remember past information and make predictions based on the sequence context.
+we will utilize the basic GRU cell that processes input sequences one element at a time while maintaining an internal state. This allows the network to remember past information and make predictions based on the sequence context.
 
 ### 2.4 Encoder-Only Transformer
 

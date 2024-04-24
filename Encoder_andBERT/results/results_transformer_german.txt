@@ -1,3 +1,0 @@
-num_heads,hidden_dim,num_layers,dropout,test_accuracy,test_precision,test_recall,test_f1score
-1,4,2,0.1,0.5744680762290955,0.28125,0.3461538553237915,0.3103448152542114
-1,4,2,0.2,0.7234042286872864,0.0,0.0,0.0
